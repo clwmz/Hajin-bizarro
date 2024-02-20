@@ -22,7 +22,9 @@ h1{
 }
 
 img{
-    margin-left: 27%;
+    position: absolute;
+    width: 45vw;
+    margin-left: 27vw;
     border-radius: 2%;
     border-style: solid;
     border-width: 3px;
