@@ -1,12 +1,21 @@
+const sim = document.querySelector('#sim');
 const nao = document.querySelector('#nao');
 let sim_size = 10;
 
-nao.onclick = () => {
+const setRandomPosition = () => {
+    nao.style.top = Math.floor(Math.random() * document.documentElement.clientHeight) + 'px';
+    nao.style.left = Math.floor(Math.random() * document.documentElement.clientWidth) + 'px';
+}
+
+const onInteraction = () => {
     sim_size += 2;
 
     sim.style.width = `${sim_size}vw`;
     nao.style.position = 'absolute';
-    nao.style.left = '1vw';
-    nao.style.top = (Math.floor(Math.random() * 50) + 1) + 'vh';
-    nao.style.left = (Math.floor(Math.random() * 50) + 1) + 'vw';
+
+    setRandomPosition();
 }
+
+nao.addEventListener('click', onInteraction)
+nao.addEventListener('touchstart', onInteraction)
+nao.addEventListener('mouseover', onInteraction)
