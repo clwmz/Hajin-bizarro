@@ -1,5 +1,5 @@
 body {
-    background-color: #3c939b; 
+    background-color: #3c939b;
     padding: 0;
     margin: 0;
     overflow: hidden;
@@ -7,19 +7,19 @@ body {
     height: 100%;
 }
 
-h1{
+h1 {
     font-size: 250%;
     color: red;
     text-align: center;
 }
 
-#container{
+#container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-img{
+img {
     width: 260px;
     border-radius: 2%;
     border-style: solid;
@@ -28,7 +28,7 @@ img{
     user-select: none;
 }
 
-#butoes{
+#butoes {
     width: 100%;
     margin-top: 30px;
     display: flex;
@@ -40,7 +40,7 @@ img{
     border-color: blue;*/
 }
 
-.butao{
+.butao {
     background-color: white;
     display: flex;
     font-size: 32px;
@@ -59,6 +59,7 @@ img{
 #sim {
     text-decoration: none;
     color: inherit;
+    transition: all 0.5s ease-out;
 }
 
 #nao {

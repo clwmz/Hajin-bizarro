@@ -1,6 +1,8 @@
 const sim = document.querySelector('#sim');
 const nao = document.querySelector('#nao');
-let sim_size = 10;
+let size = 0;
+
+let timeout = null
 
 const setRandomPosition = () => {
     nao.style.top = Math.floor(Math.random() * document.documentElement.clientHeight) + 'px';
@@ -8,10 +10,21 @@ const setRandomPosition = () => {
 }
 
 const onInteraction = () => {
-    sim_size += 2;
+    if (timeout) {
+        clearTimeout(timeout);
+    }
 
-    sim.style.width = `${sim_size}vw`;
+    size++;
+
+    console.log(size)
+
+    sim.style.transform = `scale(${1 + size / 5})`;
     nao.style.position = 'absolute';
+
+    timeout = setTimeout(() => {
+        sim.style.transform = 'scale(1)';
+        size = 0;
+    }, 1000)
 
     setRandomPosition();
 }
